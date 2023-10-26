@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dp4r8hb2nxgtr"]
+
+[ext_resource type="Texture2D" uid="uid://dg5u08nrwf5ki" path="res://sprites/_single/weapon/sword/001_rookieSword.png" id="1_lronw"]
+[ext_resource type="Script" path="res://scripts/raycastable/pickableRaycast.gd" id="1_nogpi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f5oiw"]
+size = Vector2(36, 36)
+
+[node name="001RookieSword" type="CharacterBody2D"]
+script = ExtResource("1_nogpi")
+obj_id = "Rookie Sword"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(32, 33)
+shape = SubResource("RectangleShape2D_f5oiw")
+
+[node name="001RookieSword" type="Sprite2D" parent="."]
+position = Vector2(32, 32)
+texture = ExtResource("1_lronw")

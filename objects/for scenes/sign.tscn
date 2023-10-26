@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://scgvbi4f2v3m"]
+
+[ext_resource type="Texture2D" uid="uid://dkdyem800pnwq" path="res://sprites/_single/sign.png" id="1_3ykdm"]
+[ext_resource type="Script" path="res://scripts/raycastable/objectRaycast.gd" id="1_x14f2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e3qmo"]
+size = Vector2(14, 4)
+
+[node name="sign" type="CharacterBody2D"]
+z_index = 1
+z_as_relative = false
+y_sort_enabled = true
+script = ExtResource("1_x14f2")
+obj_id = "sign"
+message = "This is a sign"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(8, 11)
+shape = SubResource("RectangleShape2D_e3qmo")
+
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(8, 8)
+texture = ExtResource("1_3ykdm")

@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://dt0qh73f22gou"]
+
+[ext_resource type="Texture2D" uid="uid://c1l7l28oxqgym" path="res://sprites/ui/border/wood/01/borderLeft.png" id="1_fr2s3"]
+[ext_resource type="Script" path="res://scripts/ui/topLeft.gd" id="1_nh8af"]
+[ext_resource type="Texture2D" uid="uid://cyxgj3ihj62dl" path="res://sprites/ui/border/wood/01/borderCenter.png" id="2_go5l5"]
+[ext_resource type="Texture2D" uid="uid://b6rjjbvor40rl" path="res://sprites/ui/border/wood/01/borderRight.png" id="3_h00u1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_770f6"]
+font_size = 4
+
+[node name="topLeftInfo" type="Node2D"]
+script = ExtResource("1_nh8af")
+
+[node name="posLabel" type="Label" parent="."]
+z_index = 2
+offset_top = 5.0
+offset_right = 89.0
+offset_bottom = 15.0
+text = "x: 0 y: 0"
+label_settings = SubResource("LabelSettings_770f6")
+
+[node name="BorderLeft" type="Sprite2D" parent="."]
+position = Vector2(0.76, 10.35)
+scale = Vector2(0.12, 0.1)
+texture = ExtResource("1_fr2s3")
+
+[node name="BorderCenter" type="Sprite2D" parent="."]
+position = Vector2(26.1, 10.3)
+scale = Vector2(0.135586, 0.1)
+texture = ExtResource("2_go5l5")
+
+[node name="BorderRight" type="Sprite2D" parent="."]
+position = Vector2(49.76, 10.35)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_h00u1")
